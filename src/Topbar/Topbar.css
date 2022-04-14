@@ -12,7 +12,6 @@
 .top-left,
 .top-right {
   flex: 3;
-  border: 1px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +26,6 @@
 
 .top-center {
   flex: 6;
-  border: 1px solid #000;
 }
 
 .topImg {
@@ -35,6 +33,7 @@
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .toplist {
@@ -52,8 +51,8 @@
 }
 
 .topsearchIcon {
-    font-size: 18px;
-    color: #666;
-    cursor: pointer;
-    margin-left: 15px;
-  }
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  margin-left: 15px;
+}
