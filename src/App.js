@@ -1,7 +1,11 @@
 import Topbar from "./Topbar/Topbar";
 
 function App() {
-  return <Topbar />;
+  return (
+    <>
+      <Topbar />
+    </>
+  );
 }
 
 export default App;
