@@ -1,6 +1,6 @@
-import Header from "../../Header/Header";
-import { Posts } from "../../posts/Posts";
-import Sidebar from "../../Sidebar/Sidebar";
+import Header from "../../Components/Header/Header";
+import { Posts } from "../../Components/posts/Posts";
+import Sidebar from "../../Components/Sidebar/Sidebar";
 import "./home.css";
 
 export default function Home() {
