@@ -3,6 +3,8 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 dotenv.config();
+const auth = require("./Routes/auth");
+app.use(express.json());
 
 mongoose
   .connect(process.env.MONGO_URL, {
@@ -14,9 +16,8 @@ mongoose
     console.log(err);
   });
 
-app.get("/", (req, res) => {
-  res.send("hiii");
-});
+app.use("/api/auth", auth);
+
 app.listen(1000, () => {
   console.log("backend is working");
 });
