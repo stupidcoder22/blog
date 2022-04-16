@@ -20,4 +20,15 @@ router.post("/register", async (req, res) => {
   }
 });
 
+// * this is login api
+router.post("/login", async (req, res) => {
+  try {
+    const data = await User.find({ email: req.body.email });
+    const tr = await bcrypt.compare(req.body.password, data[0].password);
+    res.json(data);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 module.exports = router;
