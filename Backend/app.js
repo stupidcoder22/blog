@@ -7,6 +7,7 @@ const auth = require("./Routes/auth");
 const userRoute = require("./Routes/users");
 const postRoute = require("./Routes/posts");
 const categoryRoute = require("./Routes/categories");
+const multer = require("multer");
 app.use(express.json());
 
 mongoose
@@ -19,6 +20,20 @@ mongoose
     console.log(err);
   });
 
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "images");
+  },
+  filename: (req, file, cb) => {
+    cb(null, req.body.name);
+  },
+});
+
+const upload = multer({ storage: storage });
+
+app.use("/api/upload", upload.single("file"), (req, res) => {
+  res.status(200).json("File have been uploaded");
+});
 app.use("/api/auth", auth);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
