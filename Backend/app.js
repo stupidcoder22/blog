@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 dotenv.config();
 const auth = require("./Routes/auth");
 const userRoute = require("./Routes/users");
+const postRoute = require("./Routes/posts");
 app.use(express.json());
 
 mongoose
@@ -19,6 +20,7 @@ mongoose
 
 app.use("/api/auth", auth);
 app.use("/api/users", userRoute);
+app.use("/api/posts", postRoute);
 
 app.listen(1000, () => {
   console.log("backend is working");
