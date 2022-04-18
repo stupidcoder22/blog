@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Singlepost } from "./Components/singlePost/Singlepost";
 
 function App() {
-  const user = false;
+  const user = true;
   return (
     <BrowserRouter>
       <Topbar />

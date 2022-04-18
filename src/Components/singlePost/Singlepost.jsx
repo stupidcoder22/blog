@@ -19,7 +19,7 @@ export const Singlepost = () => {
 
         <div className="singlePostInfo">
           <span className="singlepostAuthor">
-            Author: <b>Safak</b>
+            Author: <b>Prateek</b>
           </span>
           <span className="singlepostAuthor">
             Author: <b>1 hour ago</b>
